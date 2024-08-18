@@ -1,0 +1,7 @@
+services:
+  sinusbot-reviver:
+    container_name: sinusbot-reviver
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./config.json:/app/config.json
