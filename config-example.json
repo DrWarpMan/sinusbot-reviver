@@ -1,0 +1,28 @@
+{
+	"sinusbots": {
+		"main": {
+			"url": "http://localhost:8087",
+			"username": "admin",
+			"password": ""
+		}
+	},
+	"servers": [
+		{
+			"details": {
+				"host": "localhost",
+				"protocol": "raw",
+				"queryport": 10011,
+				"serverport": 9987,
+				"username": "serveradmin",
+				"password": "",
+				"nickname": "Sinusbot Reviver"
+			},
+			"instances": {
+				"Q7Da57tn+Z/+dt8wXYxOESABfKY=": {
+					"sinusbot": "main",
+					"instanceId": "6b2e45b8-f9fd-42e2-be82-333b60a90f41"
+				}
+			}
+		}
+	]
+}
