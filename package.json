@@ -1,0 +1,26 @@
+{
+  "name": "typescript-template",
+  "version": "0.0.1",
+  "description": "My personal TypeScript template",
+  "author": {
+    "email": "drwarpman@gmail.com",
+    "name": "DrWarpMan"
+  },
+  "repository": "DrWarpMan/typescript-template",
+  "keywords": [],
+  "license": "MIT",
+  "module": "src/index.ts",
+  "scripts": {},
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@tsconfig/bun": "^1.0.7",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^22.2.0",
+    "@types/bun": "^1.1.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
