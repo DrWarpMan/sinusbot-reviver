@@ -1,5 +1,5 @@
-# typescript-template
-> My personal TypeScript template
+# sinusbot-reviver
+> Revive (restart) Sinusbot instances when they crash
 
 To install dependencies:
 

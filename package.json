@@ -1,12 +1,12 @@
 {
-  "name": "typescript-template",
+  "name": "sinusbot-reviver",
   "version": "0.0.1",
-  "description": "My personal TypeScript template",
+  "description": "Revive (restart) SinusBot instances when they crash",
   "author": {
     "email": "drwarpman@gmail.com",
     "name": "DrWarpMan"
   },
-  "repository": "DrWarpMan/typescript-template",
+  "repository": "DrWarpMan/sinusbot-reviver",
   "keywords": [],
   "license": "MIT",
   "module": "src/index.ts",
