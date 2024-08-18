@@ -4,7 +4,7 @@ WORKDIR /app
 
 FROM base AS install
 
-RUN apt update && apt install -y node-gyp && apt clean
+RUN apt update && apt install -y node-gyp
 
 RUN mkdir -p /temp/prod
 COPY package.json bun.lockb /temp/prod/
