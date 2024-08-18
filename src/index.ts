@@ -46,15 +46,20 @@ const setup = async () => {
 
 						const { instanceId, sinusbot } = data;
 
-						const client = await connection.getClientByUid(uid);
+						try {
+							const client = await connection.getClientByUid(uid);
 
-						if(client) {
-							continue;
+							if(client) {
+								continue;
+							}
+
+							console.info(`Trying to revive dead bot: ${uid} (${instanceId}) - ${fullIp}`);
+							await revive(instanceId, sinusbot);
+							console.info(`Bot should be alive: ${uid} (${instanceId}) - ${fullIp}`);
+						} catch (e) {
+							console.error(`Failed to check status of bot: ${uid} (${instanceId}) - ${fullIp}`);
+							console.error(e);
 						}
-
-						console.info(`Trying to revive dead bot: ${uid} (${instanceId}) - ${fullIp}`);
-						await revive(instanceId, sinusbot);
-						console.info(`Bot should be alive: ${uid} (${instanceId}) - ${fullIp}`);
 					}
 
 					setTimeout(check, reviveInterval);
