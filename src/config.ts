@@ -23,6 +23,7 @@ const configSchema = z
 					username: z.string(),
 					password: z.string(),
 					nickname: z.string().min(3).default("Sinusbot Reviver"),
+					channelId: z.string().nullish().default(null),
 				}),
 				instances: z.record(
 					z.object({

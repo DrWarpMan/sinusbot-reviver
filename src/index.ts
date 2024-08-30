@@ -30,10 +30,23 @@ const setup = async () => {
 
 				console.info(`Connected to: ${fullIp}`);
 
+				const joinDefaultChannel = (async() => {
+					if (!server.details.channelId) {
+						return;
+					}
+
+					const { clientId } = await connection.whoami();
+					await connection.clientMove(clientId, server.details.channelId);
+					console.info(`Joined channel: ${server.details.channelId} (${fullIp})`);
+				});
+
+				joinDefaultChannel();
+
 				connection.on("close", async () => {
 					console.info(`Connection closed! (${fullIp})`);
 					await connection.reconnect(-1, 10000);
 					console.info(`Reconnected! (${fullIp})`);
+					await joinDefaultChannel();
 				});
 
 				const check = async () => {
