@@ -18,8 +18,8 @@ const configSchema = z
 					protocol: z
 						.enum([QueryProtocol.RAW, QueryProtocol.SSH])
 						.default(QueryProtocol.RAW),
-					queryport: z.number().min(1).max(65535).default(10011),
-					serverport: z.number().min(1).max(65535).default(9987),
+					queryport: z.number().int().min(1).max(65535).default(10011),
+					serverport: z.number().int().min(1).max(65535).default(9987),
 					username: z.string(),
 					password: z.string(),
 					nickname: z.string().min(3).default("Sinusbot Reviver"),
